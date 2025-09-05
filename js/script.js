@@ -94,7 +94,7 @@ function deleteTodo(index) {
   todoList.splice(index, 1);
   renderTodoList();
   Toast.fire({
-      icon: "error",
+      icon: "success",
       title: "Deleted successfully"
   });
 }

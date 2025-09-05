@@ -1,0 +1,205 @@
+/* General Dark Theme */
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container */
+.todo-container {
+  background: #1e293b;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 550px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* Header */
+header {
+  margin-bottom: 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+  color: #cbd5e1;
+}
+
+/* Input Section */
+.input-section form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-section input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+#todo-input {
+  flex: 1;
+}
+
+#todo-date-input {
+  width: 140px;
+}
+
+#add-todo-button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#add-todo-button:hover {
+  background: #4f46e5;
+}
+
+/* Action Buttons */
+.action-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.action-section select,
+.action-section input[type="date"] {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.action-section button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.filter-btn {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.action-section button:hover {
+  opacity: 0.8;
+}
+
+/* Filter Info */
+.filter-info {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #cbd5e1;
+  font-style: italic;
+}
+
+/* Todo Table */
+.todo-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0f172a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Base button style */
+.todo-table td button {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Complete button */
+.complete-btn {
+  background: #10b981; /* Emerald green */
+  color: white;
+}
+
+.complete-btn:hover {
+  background: #059669;
+}
+
+/* Undo button */
+.undo-btn {
+  background: #64748b; /* Gray */
+  color: white;
+}
+
+.undo-btn:hover {
+  background: #475569;
+}
+
+/* Delete button */
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+
+.todo-table th, .todo-table td {
+  padding: 10px;
+  text-align: center;
+  color: #e2e8f0;
+}
+
+.todo-table th {
+  font-size: 13px;
+  text-transform: uppercase;
+  background: #1e293b;
+}
+
+.todo-table tr:nth-child(even) {
+  background: #1e293b;
+}
+
+.empty-msg {
+  color: #64748b;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  margin-top: 15px;
+  color: #64748b;
+  font-size: 12px;
+}

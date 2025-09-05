@@ -1,24 +1,80 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- CSS EKSTERNAL -->
-     <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+  <!-- Container -->
+  <div class="todo-container">
     <!-- Header Section -->
-    <header></header>
+    <header>
+      <h1>Todo List</h1>
+    </header>
 
     <!-- Main Section -->
-    <main></main>
+    <main>
+      <!-- Input Section -->
+      <section class="input-section">
+        <form>
+          <input type="text" id="todo-input" placeholder="Add a todo . . ." required>
+          <input type="date" id="todo-date-input" required>
+          <button type="button" onclick="validateInput();" id="add-todo-button">+</button>
+        </form>
+      </section>
 
-    <!-- Footer Section -->
-    <footer></footer>
+      <!-- Action Buttons -->
+      <section class="action-section">
+        <select id="status-filter">
+          <option value="all">ALL</option>
+          <option value="completed">COMPLETED</option>
+          <option value="pending">PENDING</option>
+        </select>
+        <div class="date-range">
+            <input type="date" id="start-date">
+            <span class="to-text">to</span>
+            <input type="date" id="end-date">
+        </div>
+        <button class="filter-btn" type="button" onclick="applyFilter();">APPLY FILTER</button>
+        <button class="filter-btn" type="button" onclick="clearFilter();">CLEAR FILTER</button>
+        <button type="button" class="delete-btn" onclick="deleteAllTodo();">DELETE ALL</button>
+      </section>
 
-    <!-- JAVASCRIPT EKSTERNAL -->
-     <script src="js/script.js"></script>
+      <!-- Filter Info -->
+      <section class="filter-info">
+        <p id="filter-info-text">Showing: All tasks</p>
+      </section>
+
+      <!-- Todo List Section -->
+      <section class="list-section">
+        <table class="todo-table">
+          <thead>
+            <tr>
+              <th>TASK</th>
+              <th>DUE DATE</th>
+              <th>STATUS</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="todo-list">
+            <tr>
+              <td colspan="4" class="empty-msg">No task found</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Muhammad Rafif Fadhlillah Todo List</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
